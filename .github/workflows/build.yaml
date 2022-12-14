@@ -35,9 +35,10 @@ jobs:
 
       - name: Build qemu
         run: |
+          git config --with-git-submodules=validate --global --add safe.directory /__w/qemu-t8030/qemu-t8030/*
+          
           mkdir build
           cd build
-          git config --global --add safe.directory /__w/qemu-t8030/qemu-t8030
           ../configure --target-list=aarch64-softmmu --disable-capstone --disable-slirp
           make -j$(nproc)
 
