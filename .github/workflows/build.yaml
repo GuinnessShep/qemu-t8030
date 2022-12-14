@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Install build dependencies
         run: |
-          export DEBIAN_FRONTEND=noninteractive
+          export DEBIAN_FRONTEND=noninteractiv
           apt-get update
           apt-get install -y git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev libtasn1-dev ninja-build build-essential cmake
 
